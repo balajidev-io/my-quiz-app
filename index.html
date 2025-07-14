@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz App </h1>
+
+    <!-- Model Selector -->
+    <div id="model-selector">
+      <label for="quiz-model">Choose a quiz:</label>
+      <select id="quiz-model">
+        <option value="math">Math</option>
+        <option value="gk">General Knowledge</option>
+        <option value="science">Science</option>
+      </select>
+      <button onclick="startSelectedQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Area -->
+    <div id="question-box" class="hide">
+      <p id="timer">Time: 10s</p>
+      <p id="question">Question text</p>
+      <div id="answers"></div>
+    </div>
+
+    <button id="next-btn" class="hide">Next</button>
+
+    <!-- Result -->
+    <div id="result-box" class="hide">
+      <h2 id="score"></h2>
+      <h3 id="high-score"></h3>
+      <button onclick="resetApp()">Back to Menu</button>
+    </div>
+  </div>
+
+  <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+<audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
